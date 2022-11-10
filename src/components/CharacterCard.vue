@@ -5,22 +5,26 @@ export default {
         return {
 
         }
+    },
+    props: {
+        img: String,
+        name: String,
+        status: String
     }
 }
 </script>
 
 
 <template>
-    <div class="ms_card mb-3">
+    <div class="ms_card mb-3 d-flex flex-column justify-content-between">
         <div class="card-img">
-            <img src="https://images.squarespace-cdn.com/content/v1/56a5f5ef5827c35bf58e8e02/1517306531940-MSJ88JW0TQR1WNLNCZK5/Algo_Logo.jpeg"
-                alt="">
+            <img :src="img" :alt="name">
         </div>
 
         <div class="card-text text-center">
-            <div class="name mt-3 mb-3">Name</div>
-            <div class="title mt-1 mb-1">Breaking Bad</div>
-            <div class="status mt-1 mb-1">Status</div>
+            <div class="name">{{ name }}</div>
+            <div class="status">{{ status }}</div>
+            <div class="title">Breaking Bad</div>
         </div>
     </div>
 </template>
@@ -34,6 +38,12 @@ export default {
 
 .card-img {
     width: 100%;
+    height: 70%;
+}
+
+.card-text {
+    height: 30%;
+    padding: 1rem;
 }
 
 .name {
