@@ -17,7 +17,9 @@ export default {
 
 
 <template>
-
+    <div class="container d-flex flex-wrap justify-content-between p-2">
+        <CharacterCard v-for="(card, index) in store.characters" />
+    </div>
 </template>
 
 
